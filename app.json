@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "KPP Test & Practice 2022",
+    "slug": "thedrivingapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/images/icon.png",
+    "splash": {
+      "image": "./app/assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ilyasinc.kpptheorytest"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/images/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.ilyasinc.kpptheorytest"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
