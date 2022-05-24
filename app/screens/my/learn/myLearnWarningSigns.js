@@ -26,6 +26,7 @@ import {
   useFonts,
 } from "@expo-google-fonts/lato";
 import { ThemeContext } from "../../../context/ThemeManager";
+import { verticalScale } from "react-native-size-matters";
 
 export default function myLearnWarningSign({ navigation }) {
   const { theme } = useContext(ThemeContext);
@@ -51,7 +52,7 @@ export default function myLearnWarningSign({ navigation }) {
   };
 
   const handleLast = () => {
-    navigation.navigate("myLearnChoice");
+    navigation.navigate("MYLearn");
   };
 
   const handleBack = () => {
@@ -185,7 +186,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.2,
     color: "black",
     fontFamily: "Lato_900Black",
-    marginTop: 10,
+    marginTop: verticalScale(5),
     color: "#ff4444",
   },
   lastDescripWrapper: {
@@ -195,7 +196,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   lastWrapper: {
-    marginTop: 50,
+    marginTop: 10,
     justifyContent: "center",
     alignItems: "center",
   },

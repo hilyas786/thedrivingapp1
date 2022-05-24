@@ -14,6 +14,7 @@ import { COLORS, SIZES } from "../../constants";
 import engColorTestData from "../../data/engColorTestData";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { ThemeContext } from "../../context/ThemeManager";
+import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 
 const engColorBlindTest = () => {
   const allQuestions = engColorTestData;
@@ -139,7 +140,7 @@ const engColorBlindTest = () => {
               alignItems: "center",
               justifyContent: "space-between",
               paddingHorizontal: 20,
-              marginVertical: 10,
+              marginVertical: verticalScale(5),
             }}
           >
             <Text
@@ -334,15 +335,15 @@ const styles = StyleSheet.create({
   },
   backgroundLight: {
     flex: 1,
-    paddingVertical: 30,
-    paddingHorizontal: 20,
+    paddingVertical: moderateScale(-15),
+    paddingHorizontal: scale(5),
     backgroundColor: "#f5f5f5",
     position: "relative",
   },
   backgroundDark: {
     flex: 1,
-    paddingVertical: 30,
-    paddingHorizontal: 20,
+    paddingVertical: moderateScale(1),
+    paddingHorizontal: scale(5),
     backgroundColor: "#212121",
     position: "relative",
   },

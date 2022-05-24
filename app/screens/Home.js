@@ -8,8 +8,10 @@ import {
   SafeAreaView,
   Platform,
 } from "react-native";
+import { Dimensions } from "react-native";
 
 import React, { useState } from "react";
+import { scale, verticalScale, moderateScale } from "react-native-size-matters";
 
 import {
   Lato_100Thin,
@@ -35,6 +37,7 @@ import { ThemeContext } from "../context/ThemeManager";
 export default function Home({ navigation }) {
   const { theme } = React.useContext(ThemeContext);
   const [language, setLanguage] = useState(null);
+  const { width, height } = Dimensions.get("window");
 
   //
   const [selectedId, setSelectedId] = useState(null);
@@ -78,8 +81,8 @@ export default function Home({ navigation }) {
           <Image
             source={require("../assets/images/homeIcons/dive2.png")}
             style={{
-              width: 200,
-              height: 200,
+              width: scale(120),
+              height: verticalScale(120),
             }}
           />
         </View>
@@ -108,12 +111,17 @@ export default function Home({ navigation }) {
             )}
           />
         </View>
-        <TouchableOpacity
-          style={[language && styles.buttonLight, styles[`button${theme}`]]}
-          onPress={handlePress}
-        >
-          <Text style={styles.buttonText}>Next</Text>
-        </TouchableOpacity>
+        <View style={styles.lastButton}>
+          <TouchableOpacity
+            style={[language && styles.buttonLight, styles[`button${theme}`]]}
+            onPress={handlePress}
+          >
+            <Text style={styles.buttonText}>Next</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.loveWrapper}>
+          <Text style={styles.loveText}>Enjoy ❤️ from IlyasInc.</Text>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -122,18 +130,22 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   containerLight: {
     flex: 1,
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height,
     backgroundColor: "#f5f5f5",
   },
   containerDark: {
     flex: 1,
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height,
     backgroundColor: "#1f1b24",
   },
   introWrapper: {
-    paddingHorizontal: 20,
-    marginTop: 50,
+    paddingHorizontal: scale(20),
+    marginTop: verticalScale(50),
   },
   introImageWrapper: {
-    marginTop: Platform.OS === "ios" ? 50 : 20,
+    marginTop: scale(50),
     alignItems: "center",
   },
   langWrapper: {
@@ -169,10 +181,8 @@ const styles = StyleSheet.create({
   },
 
   buttonLight: {
-    marginLeft: 100,
-    width: 200,
-    height: 50,
-    marginTop: 30,
+    width: scale(200),
+    height: verticalScale(50),
     backgroundColor: "#ff4444",
     borderRadius: 10,
     justifyContent: "center",
@@ -180,10 +190,8 @@ const styles = StyleSheet.create({
     borderColor: "#C0C0C0",
   },
   buttonDark: {
-    marginLeft: 100,
-    width: 200,
-    height: 50,
-    marginTop: 30,
+    width: scale(200),
+    height: verticalScale(50),
     backgroundColor: "#121212",
     backgroundColor: "rgba(255, 255, 255, 0.1)",
     borderRadius: 10,
@@ -235,5 +243,18 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#c63c32",
     color: "white",
+  },
+  lastButton: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  loveWrapper: {
+    marginTop: verticalScale(15),
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  loveText: {
+    fontSize: 12,
+    color: "#808080",
   },
 });

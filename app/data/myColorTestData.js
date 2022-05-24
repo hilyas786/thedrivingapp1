@@ -7,8 +7,8 @@ export default myColorTest = [
       <Image
         source={require("../assets/images/colorBlindImages/12.png")}
         style={{
-          width: Platform.OS === "ios" ? 180 : 150,
-          height: Platform.OS === "ios" ? 180 : 150,
+          width: Platform.OS === "ios" ? 150 : 120,
+          height: Platform.OS === "ios" ? 150 : 120,
         }}
       />
     ),
@@ -40,8 +40,8 @@ export default myColorTest = [
       <Image
         source={require("../assets/images/colorBlindImages/29.png")}
         style={{
-          width: Platform.OS === "ios" ? 180 : 150,
-          height: Platform.OS === "ios" ? 180 : 150,
+          width: Platform.OS === "ios" ? 150 : 120,
+          height: Platform.OS === "ios" ? 150 : 120,
         }}
       />
     ),
@@ -54,8 +54,8 @@ export default myColorTest = [
       <Image
         source={require("../assets/images/colorBlindImages/97.png")}
         style={{
-          width: Platform.OS === "ios" ? 180 : 150,
-          height: Platform.OS === "ios" ? 180 : 150,
+          width: Platform.OS === "ios" ? 150 : 120,
+          height: Platform.OS === "ios" ? 150 : 120,
         }}
       />
     ),
@@ -68,8 +68,8 @@ export default myColorTest = [
       <Image
         source={require("../assets/images/colorBlindImages/15.png")}
         style={{
-          width: Platform.OS === "ios" ? 180 : 150,
-          height: Platform.OS === "ios" ? 180 : 150,
+          width: Platform.OS === "ios" ? 150 : 120,
+          height: Platform.OS === "ios" ? 150 : 120,
         }}
       />
     ),
@@ -82,8 +82,8 @@ export default myColorTest = [
       <Image
         source={require("../assets/images/colorBlindImages/004.jpg")}
         style={{
-          width: Platform.OS === "ios" ? 180 : 150,
-          height: Platform.OS === "ios" ? 180 : 150,
+          width: Platform.OS === "ios" ? 150 : 120,
+          height: Platform.OS === "ios" ? 150 : 120,
         }}
       />
     ),
@@ -96,8 +96,8 @@ export default myColorTest = [
       <Image
         source={require("../assets/images/colorBlindImages/8.jpg")}
         style={{
-          width: Platform.OS === "ios" ? 180 : 150,
-          height: Platform.OS === "ios" ? 180 : 150,
+          width: Platform.OS === "ios" ? 150 : 120,
+          height: Platform.OS === "ios" ? 150 : 120,
         }}
       />
     ),

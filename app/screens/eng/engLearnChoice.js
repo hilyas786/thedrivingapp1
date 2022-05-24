@@ -9,6 +9,7 @@ import {
   Animated,
   StyleSheet,
 } from "react-native";
+import { scale, verticalScale, moderateScale } from "react-native-size-matters";
 
 import React, { useContext } from "react";
 
@@ -91,8 +92,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#1f1b24",
   },
   introWrapper: {
-    paddingHorizontal: 20,
-    marginTop: 10,
+    marginTop: verticalScale(5),
   },
   introTextLight: {
     textAlign: "center",
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.2,
     color: "black",
     fontFamily: "Lato_900Black",
-    marginTop: 15,
+    marginTop: verticalScale(5),
   },
   introTextDark: {
     textAlign: "center",

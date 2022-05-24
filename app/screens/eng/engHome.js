@@ -28,6 +28,7 @@ import {
   useFonts,
 } from "@expo-google-fonts/lato";
 import { ThemeContext } from "../../context/ThemeManager";
+import { verticalScale } from "react-native-size-matters";
 
 export default function engHome({ navigation }) {
   const { theme } = React.useContext(ThemeContext);
@@ -86,36 +87,16 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#1f1b24",
   },
-  introWrapper: {
-    paddingHorizontal: 20,
-    marginTop: 10,
-  },
-  introText: {
-    textAlign: "center",
-    fontSize: 28,
-    letterSpacing: 0.2,
-    color: "#ff4444",
-    fontFamily: "Lato_900Black",
-    marginTop: 15,
-  },
   examButtonWrapper: {
     alignItems: "center",
-    marginHorizontal: 20,
-    marginTop: Platform.OS === "ios" ? 80 : 10,
+    marginTop: verticalScale(20),
   },
   roadSignsButtonWrapper: {
     alignItems: "center",
-    marginHorizontal: 20,
-    marginTop: Platform.OS === "ios" ? 15 : -20,
+    marginTop: verticalScale(10),
   },
   colorBlindButtonWrapper: {
     alignItems: "center",
-    marginHorizontal: 20,
-    marginTop: Platform.OS === "ios" ? 15 : -20,
-  },
-  langWrapper: {
-    alignItems: "center",
-    marginHorizontal: 20,
-    marginTop: 90,
+    marginTop: verticalScale(10),
   },
 });

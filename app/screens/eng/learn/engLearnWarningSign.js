@@ -9,6 +9,7 @@ import {
   Animated,
   StyleSheet,
 } from "react-native";
+import { verticalScale } from "react-native-size-matters";
 
 import React, { useContext, useEffect, useState } from "react";
 import engLearnData from "../../../data/engLearnData/engLearnWarningData";
@@ -51,7 +52,7 @@ export default function engLearnWarningSign({ navigation }) {
   };
 
   const handleLast = () => {
-    navigation.navigate("engLearnChoice");
+    navigation.navigate("Learn");
   };
 
   const handleBack = () => {
@@ -186,7 +187,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.2,
     color: "black",
     fontFamily: "Lato_900Black",
-    marginTop: 10,
+    marginTop: verticalScale(5),
     color: "#ff4444",
   },
   lastDescripWrapper: {

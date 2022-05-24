@@ -16,7 +16,8 @@ import {
   useFonts,
 } from "@expo-google-fonts/lato";
 import { ThemeContext } from "../context/ThemeManager";
-
+import { SafeAreaView } from "react-native-safe-area-context";
+import { scale, verticalScale, moderateScale } from "react-native-size-matters";
 export default function Card({ onPress, img, bw, txt }) {
   let [fontsLoaded, error] = useFonts({
     Lato_300Light,
@@ -27,24 +28,26 @@ export default function Card({ onPress, img, bw, txt }) {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <View>
-      <TouchableOpacity onPress={onPress}>
-        <View style={[styles[`cardContainer${theme}`], { borderWidth: bw }]}>
-          <View style={styles.cardContent}>
-            <Text style={[styles.cardTextLight, styles[`cardText${theme}`]]}>
-              {txt}
-            </Text>
+    <SafeAreaView>
+      <View>
+        <TouchableOpacity onPress={onPress}>
+          <View style={[styles[`cardContainer${theme}`], { borderWidth: bw }]}>
+            <View style={styles.cardContent}>
+              <Text style={[styles.cardTextLight, styles[`cardText${theme}`]]}>
+                {txt}
+              </Text>
+            </View>
           </View>
-        </View>
-      </TouchableOpacity>
-    </View>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 }
 // { borderWidth: bw }
 const styles = StyleSheet.create({
   cardContainerLight: {
-    height: 100,
-    width: 150,
+    height: verticalScale(100),
+    width: scale(120),
     backgroundColor: "#f5f5f5",
     borderRadius: 30,
     justifyContent: "space-around",
@@ -65,8 +68,8 @@ const styles = StyleSheet.create({
     elevation: 24,
   },
   cardContainerDark: {
-    height: 100,
-    width: 150,
+    height: verticalScale(100),
+    width: scale(120),
     backgroundColor: "#121212",
     backgroundColor: "rgba(255, 255, 255, 0.1)",
     borderRadius: 30,

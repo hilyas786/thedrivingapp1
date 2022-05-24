@@ -2,7 +2,7 @@
   "expo": {
     "name": "KPP Test & Practice 2022",
     "slug": "thedrivingapp",
-    "version": "1.0.0",
+    "version": "1.1.5",
     "orientation": "portrait",
     "icon": "./app/assets/images/icon.png",
     "splash": {

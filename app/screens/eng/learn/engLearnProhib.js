@@ -26,7 +26,7 @@ import {
   useFonts,
 } from "@expo-google-fonts/lato";
 import { ThemeContext } from "../../../context/ThemeManager";
-
+import { verticalScale } from "react-native-size-matters";
 export default function engLearnProhib({ navigation }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [disabled, setDisabled] = useState(false);
@@ -51,7 +51,7 @@ export default function engLearnProhib({ navigation }) {
   };
 
   const handleLast = () => {
-    navigation.navigate("engLearnChoice");
+    navigation.navigate("Learn");
   };
 
   const handleBack = () => {
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   imageWrapper: {
-    marginTop: 40,
+    marginTop: verticalScale(5),
     justifyContent: "center",
   },
   description: {
@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.2,
     color: "black",
     fontFamily: "Lato_900Black",
-    marginTop: 10,
+    marginTop: verticalScale(5),
     color: "#ff4444",
   },
   lastDescripWrapper: {
