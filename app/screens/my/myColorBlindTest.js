@@ -4,13 +4,12 @@ import {
   Text,
   SafeAreaView,
   StatusBar,
-  Image,
   TouchableOpacity,
   Modal,
   Animated,
   StyleSheet,
 } from "react-native";
-import { COLORS, SIZES } from "../../constants";
+import { COLORS } from "../../constants";
 import myColorTestData from "../../data/myColorTestData";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { ThemeContext } from "../../context/ThemeManager";

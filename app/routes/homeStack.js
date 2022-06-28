@@ -1,36 +1,35 @@
-import { createStackNavigator } from "react-navigation-stack";
-import { createAppContainer } from "react-navigation";
-import Home from "../screens/Home";
-import myTrialExam from "../screens/my/myTrialExam";
-import engTrialExam from "../screens/eng/engTrialExam";
-import myCarHome from "../screens/my/myCarHome";
-import engHome from "../screens/eng/engHome";
-import myBikeHome from "../screens/my/motorbike/myBikeHome";
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+import Home from '../screens/Home';
+import myTrialExam from '../screens/my/myTrialExam';
+import engTrialExam from '../screens/eng/engTrialExam';
+import myCarHome from '../screens/my/myCarHome';
+import engHome from '../screens/eng/engHome';
+
 //
-import myColorBlindTest from "../screens/my/myColorBlindTest";
-import engColorBlindTest from "../screens/eng/engColorBlindTest";
+import myColorBlindTest from '../screens/my/myColorBlindTest';
+import engColorBlindTest from '../screens/eng/engColorBlindTest';
 //Learn English
 
-import engLearn from "../screens/eng/learn/engLearnWarningSign";
-import engLearnWarningSign from "../screens/eng/learn/engLearnWarningSign";
-import engLearnChoice from "../screens/eng/engLearnChoice";
-import engLearnProhib from "../screens/eng/learn/engLearnProhib";
+import engLearnWarningSign from '../screens/eng/learn/engLearnWarningSign';
+import engLearnChoice from '../screens/eng/engLearnChoice';
+import engLearnProhib from '../screens/eng/learn/engLearnProhib';
 
 // Learn Malay
-import myLearn from "../screens/my/myLearnChoice";
-import engLearnInfo from "../screens/eng/learn/engLearnInfo";
-import myLearnChoice from "../screens/my/myLearnChoice";
-import myLearnWarningSign from "../screens/my/learn/myLearnWarningSigns";
-import myLearnProhib from "../screens/my/learn/myLearnProhib";
-import myLearnInfo from "../screens/my/learn/myLearnInfo";
-import bikeTest from "../screens/my/motorbike/bikeTest";
+
+import engLearnInfo from '../screens/eng/learn/engLearnInfo';
+import myLearnChoice from '../screens/my/myLearnChoice';
+import myLearnWarningSign from '../screens/my/learn/myLearnWarningSigns';
+import myLearnProhib from '../screens/my/learn/myLearnProhib';
+import myLearnInfo from '../screens/my/learn/myLearnInfo';
+import bikeTest from '../screens/my/motorbike/bikeTest';
 
 //Themes
-import { ThemeContext, ThemeProvider } from "../context/ThemeManager";
-import { Button, Switch, View, Image, StyleSheet } from "react-native";
-import React, { useContext, useState } from "react";
-import { useEffect } from "react";
-import DarkSwitch from "../components/DarkSwitch";
+import { ThemeContext, ThemeProvider } from '../context/ThemeManager';
+
+import React, { useContext } from 'react';
+
+import DarkSwitch from '../components/DarkSwitch';
 
 const screens = {
   Home: {
@@ -98,14 +97,14 @@ const screens = {
   myExam: {
     screen: myTrialExam,
     navigationOptions: {
-      title: "Ujian",
+      title: 'Ujian',
     },
   },
 
   engExam: {
     screen: engTrialExam,
     navigationOptions: {
-      title: "Exam",
+      title: 'Exam',
     },
   },
 
@@ -113,7 +112,7 @@ const screens = {
   myCarHome: {
     screen: myCarHome,
     navigationOptions: {
-      title: "Rumah",
+      title: 'Rumah',
     },
   },
   engHome: {
@@ -147,9 +146,9 @@ const HomeStack = createStackNavigator(screens, {
   defaultNavigationOptions: ({ screenProps }) => ({
     headerRight: () => <DarkSwitch />,
 
-    headerTintColor: screenProps.theme === "Dark" ? "#f7f7f7" : "#000000",
+    headerTintColor: screenProps.theme === 'Dark' ? '#f7f7f7' : '#000000',
     headerStyle: {
-      backgroundColor: screenProps.theme === "Dark" ? "#212121" : "#f7f7f7",
+      backgroundColor: screenProps.theme === 'Dark' ? '#212121' : '#f7f7f7',
     },
   }),
 });
